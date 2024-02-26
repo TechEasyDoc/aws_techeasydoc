@@ -1,7 +1,14 @@
+import Logo from './components/logo';
+
 export default {
-	logo: <span>My Nextra Documentation</span>,
+	logo: <Logo />,
 	project: {
 		link: 'https://github.com/shuding/nextra',
 	},
-	// ... other theme options
+	feedback: {
+		useLink: () => 'null',
+		content: null,
+	},
+	darkMode: false,
+	project: {},
 };
