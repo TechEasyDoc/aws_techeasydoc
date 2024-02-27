@@ -2,15 +2,17 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import Header from '@/components/header';
 import SearchIcon from '@/components/searchicon';
-import Article from '@/components/Article';
 import ArrowIcon from '@/components/arrowIcon';
 import Link from 'next/link';
+import Article from '@/components/article';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
 	return (
-		<main className={`min-h-screen h-full bg-[#FBFBFB] pb-8 ${inter.className}`}>
+		<main
+			className={`min-h-screen h-full bg-[#FBFBFB] pb-8 ${inter.className}`}
+		>
 			<Header />
 			<section className='mt-10 lg:mt-[90px] flex justify-center'>
 				<div className='w-full lg:w-[750px]'>
