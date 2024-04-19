@@ -1,13 +1,5 @@
 {
-  "-- get-started": {
-    "title": "Deployment",
-    "type": "separator"
-  },
   "doc": "ECR",
   "ecs": "ECS",
-  "fargate": "AWS Fargate",
-  "-- docs": {
-    "title": "Concepts",
-    "type": "separator"
-  }
+  "fargate": "AWS Fargate"
 }
