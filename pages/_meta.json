@@ -1,5 +1,5 @@
 {
-  "doc": "ECR",
+  "introduction": "Introduction",
   "ecs": "ECS",
   "fargate": "AWS Fargate"
 }

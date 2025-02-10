@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from './logo';
+import Logo from './Logo';
 import { GitHubIcon } from 'nextra/icons';
 import { Link } from 'nextra-theme-docs';
 

@@ -1,14 +1,21 @@
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import Header from '@/components/header';
-import SearchIcon from '@/components/searchicon';
-import ArrowIcon from '@/components/arrowIcon';
+import Header from '@/components/Header';
+import SearchIcon from '@/components/SearchIcon';
+import ArrowIcon from '@/components/ArrowIcon';
 import Link from 'next/link';
-import Article from '@/components/article';
+import Article from '@/components/Article';
+import Searchform from '@/components/SearchForm';
+import { useState } from 'react';
+import { SearchResult } from '@/utils/search';
+import { SearchResults } from '@/components/SearchResults';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+	const [results, setResults] = useState<SearchResult[]>([]);
+	const [query, setQuery] = useState('');
+
 	return (
 		<main
 			className={`min-h-screen h-full bg-[#FBFBFB] pb-8 ${inter.className}`}
@@ -20,16 +27,13 @@ export default function Home() {
 						AWS <span className='text-[#556CD6]'>Stuffs</span> made
 						easy and enjoyable
 					</h1>
-					<form action='' className='mb-4'>
-						<div className='border border-[#E5EBF0] h-[57px] hover:border-slate-300 rounded-md flex items-center px-3 bg-white focus-within:border-[#E5EBF0]'>
-							<input
-								type='text'
-								className='focus:outline-none w-full'
-								placeholder='What would you like to learn'
-							/>
-							<SearchIcon />
-						</div>
-					</form>
+					<section className='relative'>
+						<Searchform
+							onSearchResults={setResults}
+							onSearchQuery={setQuery}
+						/>
+						<SearchResults results={results} query={query} />
+					</section>
 					<div className='flex gap-4 justify-center'>
 						<Link
 							href='#'
@@ -59,7 +63,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className='mt-16 lg:mt-32 px-5 lg:px-20'>
-				<header className='border-b border-[#E5EBF0] pb-4 mb-8'>
+				<header className='border-b border-[#E5EBF0] pb-4'>
 					<h3 className='text-lg font-semibold text-[#293A49]'>
 						Latest
 					</h3>
