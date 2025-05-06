@@ -1,3 +1,5 @@
+import React from 'react';
+
 const SearchIcon = (props: React.SVGProps<SVGSVGElement>) => (
 	<svg
 		width='13'
