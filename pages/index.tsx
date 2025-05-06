@@ -6,15 +6,39 @@ import ArrowIcon from '@/components/ArrowIcon';
 import Link from 'next/link';
 import Article from '@/components/Article';
 import Searchform from '@/components/SearchForm';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SearchResult } from '@/utils/search';
 import { SearchResults } from '@/components/SearchResults';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+	// search state
 	const [results, setResults] = useState<SearchResult[]>([]);
 	const [query, setQuery] = useState('');
+
+	// list state
+	const [list, setList] = useState<SearchResult[]>([]);
+	const [listLoading, setListLoading] = useState(false);
+	const [listError, setListError] = useState(false);
+
+	// Fetch the latest posts
+	const fetchLatestPosts = async () => {
+		setListLoading(true);
+		try {
+			const response = await fetch('/api/latest-posts');
+			const data = await response.json();
+			setList(data);
+		} catch (error) {
+			setListError(true);
+		} finally {
+			setListLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		fetchLatestPosts();
+	}, []);
 
 	return (
 		<main
@@ -68,7 +92,24 @@ export default function Home() {
 						Latest
 					</h3>
 				</header>
-				<Article
+				{listLoading && (
+					<div className='text-sm text-gray-500 mt-2'>Loading...</div>
+				)}
+				{listError && (
+					<div className='text-sm text-red-500 mt-2'>
+						Failed to load latest posts
+					</div>
+				)}
+				{list.map((item) => (
+					<Article
+						key={item.slug}
+						description={item.description!}
+						link={item.slug}
+						tags={item.tags!}
+						title={item.title}
+					/>
+				))}
+				{/* <Article
 					description='This post discusses what AWS ECS is and provides a detailed step-by-step guide to using it to build a basic project management application with Flutter'
 					link='#'
 					tags={['AWS', 'ECS', 'Cloud Deployment']}
@@ -79,7 +120,7 @@ export default function Home() {
 					link='#'
 					tags={['AWS', 'ECS', 'Cloud Deployment']}
 					title='How to setup ECS on AWS'
-				/>
+				/> */}
 				<div className='flex justify-center'>
 					<Link
 						href='/doc'

@@ -5,7 +5,7 @@ import { Link } from 'nextra-theme-docs';
 
 export default function Header() {
 	return (
-		<nav className='flex justify-between items-center border-b border-[#E5EBF0] px-5 lg:px-[3.5rem] py-3'>
+		<nav className='flex justify-between items-center border-b border-[#E5EBF0] px-5 lg:px-[4rem] py-3 lg:py-4'>
 			<div className=''>
 				<Logo />
 			</div>

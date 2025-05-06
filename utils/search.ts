@@ -4,17 +4,21 @@ import removeMarkdown from 'remove-markdown';
 import { promises as fs } from 'fs';
 import path from 'path';
 
-export interface MatterData {
-    title?: string;
-    date?: string;
-    [key: string]: any;
-}
+// export interface MatterData {
+//     title?: string;
+//     date?: string;
+//     tags?: string[];
+//     description?: string;
+//     [key: string]: any;
+// }
 
 export interface SearchResult {
     title: string;
     slug: string;
     content: string;
     date?: string;
+    tags?: string[];
+    description?: string;
 }
 
 export async function searchMdxFiles(query: string): Promise<SearchResult[]> {
@@ -47,6 +51,39 @@ export async function searchMdxFiles(query: string): Promise<SearchResult[]> {
         const searchContent = `${post.title} ${post.content}`.toLowerCase();
         return searchContent.includes(normalizedQuery);
     });
+}
+
+export async function listMdxFiles(): Promise<SearchResult[]> {
+    const pagesDir = path.join(process.cwd(), 'pages');
+    const files = await getMdxFiles(pagesDir);
+
+    const results = await Promise.all(
+        files.map(async (filePath) => {
+            const relativePath = path.relative(pagesDir, filePath);
+            const slug = relativePath
+                .replace(/\.mdx?$/, '')
+                .replace(/\\/g, '/')
+                .replace(/^\/?/, '/');
+
+            const fileContent = await fs.readFile(filePath, 'utf8');
+            const { data, content } = matter(fileContent);
+            const plainText = removeMarkdown(content);
+
+            return {
+                title: data.title || 'Untitled',
+                slug,
+                content: plainText,
+                date: data.date || '1970-01-01', // Fallback for missing dates
+                tags: data.tags || [],
+            };
+        })
+    );
+
+    // Sort by date (newest first)
+    return results.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+
 }
 
 async function getMdxFiles(dir: string): Promise<string[]> {
