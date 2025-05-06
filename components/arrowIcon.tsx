@@ -9,16 +9,16 @@ const ArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
 		<path
 			d='M4.5 12H20.5'
 			stroke='#556CD6'
-			stroke-width='2'
-			stroke-linecap='round'
-			stroke-linejoin='round'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
 		/>
 		<path
 			d='M14.5 6L20.5 12L14.5 18'
 			stroke='#556CD6'
-			stroke-width='2'
-			stroke-linecap='round'
-			stroke-linejoin='round'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
 		/>
 	</svg>
 );
