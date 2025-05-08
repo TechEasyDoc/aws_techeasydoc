@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from './Logo';
+import Logo from '../components/Logo';
 import { GitHubIcon } from 'nextra/icons';
 import { Link } from 'nextra-theme-docs';
 
@@ -14,4 +14,4 @@ export default function Header() {
 			</Link>
 		</nav>
 	);
-}
+} 
