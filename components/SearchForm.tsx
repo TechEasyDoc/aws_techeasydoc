@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import SearchIcon from './searchicon';
+import SearchIcon from './SearchIcon';
 import { SearchResult } from '@/utils/search';
 
 interface SearchProps {
