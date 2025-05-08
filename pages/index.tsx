@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header';
-import SearchIcon from '@/components/SearchIcon';
 import ArrowIcon from '@/components/ArrowIcon';
 import Link from 'next/link';
 import Article from '@/components/Article';
