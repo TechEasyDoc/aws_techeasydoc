@@ -1,17 +1,22 @@
 import React from 'react';
-import Logo from '../components/Logo';
+import Logo from './Logo';
 import { GitHubIcon } from 'nextra/icons';
-import { Link } from 'nextra-theme-docs';
+import Link from 'next/link';
 
 export default function Header() {
 	return (
-		<nav className='flex justify-between items-center border-b border-[#E5EBF0] px-5 lg:px-[2.2rem] py-3 lg:py-4'>
-			<div className=''>
-				<Logo />
+		<nav className='flex justify-center border-b border-[#E5EBF0] px-5 lg:px-[2.2rem] py-3 lg:py-4'>
+			<div className='flex justify-between items-center lg:w-[1440px] w-full'>
+				<div className=''>
+					<Logo />
+				</div>
+				<Link
+					href='https://github.com/TechEasyDoc/aws_techeasydoc'
+					target='_blank'
+				>
+					<GitHubIcon />
+				</Link>
 			</div>
-			<Link href='#' target='_blank'>
-				<GitHubIcon />
-			</Link>
 		</nav>
 	);
-} 
+}
