@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './Logo';
 import { GitHubIcon } from 'nextra/icons';
 import Link from 'next/link';
+import BuyMeCoffee from './BuyMeCoffee';
 
 export default function Header() {
 	return (
@@ -10,12 +11,15 @@ export default function Header() {
 				<div className=''>
 					<Logo />
 				</div>
-				<Link
-					href='https://github.com/TechEasyDoc/aws_techeasydoc'
-					target='_blank'
-				>
-					<GitHubIcon />
-				</Link>
+				<div className='flex items-center gap-4'>
+					<BuyMeCoffee />
+					<Link
+						href='https://github.com/TechEasyDoc/aws_techeasydoc'
+						target='_blank'
+					>
+						<GitHubIcon />
+					</Link>
+				</div>
 			</div>
 		</nav>
 	);

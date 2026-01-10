@@ -16,7 +16,10 @@ export default function Document() {
 
 				{/* Open Graph / Facebook */}
 				<meta property='og:type' content='website' />
-				<meta property='og:url' content='https://techeasydoc.com/' />
+				<meta
+					property='og:url'
+					content='https://aws.techeasydoc.com/'
+				/>
 				<meta
 					property='og:title'
 					content='AWS TechEasyDoc - AWS Made Easy'
@@ -27,13 +30,16 @@ export default function Document() {
 				/>
 				<meta
 					property='og:image'
-					content='https://techeasydoc.com/og-image.png'
+					content='https://aws.techeasydoc.com/og-image.png'
 				/>
 				<meta property='og:site_name' content='TechEasyDoc' />
 
 				{/* Twitter Card */}
 				<meta name='twitter:card' content='summary_large_image' />
-				<meta name='twitter:url' content='https://techeasydoc.com/' />
+				<meta
+					name='twitter:url'
+					content='https://aws.techeasydoc.com/'
+				/>
 				<meta
 					name='twitter:title'
 					content='AWS TechEasyDoc - AWS Made Easy'
@@ -44,7 +50,7 @@ export default function Document() {
 				/>
 				<meta
 					name='twitter:image'
-					content='https://techeasydoc.com/og-image.png'
+					content='https://aws.techeasydoc.com/og-image.png'
 				/>
 
 				<link rel='icon' href='/logoSM.png' type='image/png' />

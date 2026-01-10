@@ -1,5 +1,6 @@
 import Logo from './components/Logo';
 import Script from 'next/script';
+import BuyMeCoffee from './components/BuyMeCoffee';
 
 export default {
 	logo: <Logo />,
@@ -44,6 +45,18 @@ export default {
 		next: false,
 	},
 	footer: {
-		text: <span>TechEasyDoc {new Date().getFullYear()} © </span>,
+		text: (
+			<div
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					gap: '12px',
+				}}
+			>
+				<BuyMeCoffee />
+				<span>TechEasyDoc {new Date().getFullYear()} ©</span>
+			</div>
+		),
 	},
 };
