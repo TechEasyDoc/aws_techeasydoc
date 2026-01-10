@@ -42,7 +42,6 @@ export default function Home() {
 		try {
 			const response = await fetch('/api/categories');
 			const data = await response.json();
-			console.log(data);
 			setCategories(data);
 		} catch (error) {
 			console.error('Failed to fetch categories:', error);
