@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Article from '@/components/Article';
 import Searchform from '@/components/SearchForm';
 import { useEffect, useState } from 'react';
-import { SearchResult } from '@/utils/search';
+import { SearchResult, CategoryInfo } from '@/utils/search';
 import { SearchResults } from '@/components/SearchResults';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,6 +19,9 @@ export default function Home() {
 	const [list, setList] = useState<SearchResult[]>([]);
 	const [listLoading, setListLoading] = useState(false);
 	const [listError, setListError] = useState(false);
+
+	// categories state
+	const [categories, setCategories] = useState<CategoryInfo[]>([]);
 
 	// Fetch the latest posts
 	const fetchLatestPosts = async () => {
@@ -34,8 +37,21 @@ export default function Home() {
 		}
 	};
 
+	// Fetch categories
+	const fetchCategories = async () => {
+		try {
+			const response = await fetch('/api/categories');
+			const data = await response.json();
+			console.log(data);
+			setCategories(data);
+		} catch (error) {
+			console.error('Failed to fetch categories:', error);
+		}
+	};
+
 	useEffect(() => {
 		fetchLatestPosts();
+		fetchCategories();
 	}, []);
 
 	return (
@@ -56,31 +72,22 @@ export default function Home() {
 						/>
 						<SearchResults results={results} query={query} />
 					</section>
-					<div className='flex gap-4 justify-center'>
-						<Link
-							href='#'
-							className='px-2 py-1 bg-[#DCD1F4] rounded text-xs font-medium text-[#3C0F9F]'
-						>
-							Storage
-						</Link>
-						<Link
-							href='#'
-							className='px-2 py-1 bg-[#DCD1F4] rounded text-xs font-medium text-[#3C0F9F]'
-						>
-							Compute
-						</Link>
-						<Link
-							href='#'
-							className='px-2 py-1 bg-[#DCD1F4] rounded text-xs font-medium text-[#3C0F9F]'
-						>
-							Database
-						</Link>
-						<Link
-							href='#'
-							className='px-2 py-1 bg-[#DCD1F4] rounded text-xs font-medium text-[#3C0F9F]'
-						>
-							Networking
-						</Link>
+					<div className='flex gap-4 justify-center flex-wrap'>
+						{categories.length > 0 ? (
+							categories.map((cat) => (
+								<Link
+									key={cat.name}
+									href={cat.slug}
+									className='px-2 py-1 bg-[#DCD1F4] rounded text-xs font-medium text-[#3C0F9F]'
+								>
+									{cat.name}
+								</Link>
+							))
+						) : (
+							<span className='text-xs text-gray-400'>
+								Loading categories...
+							</span>
+						)}
 					</div>
 				</div>
 			</section>
@@ -111,13 +118,15 @@ export default function Home() {
 						/>
 					))}
 					<div className='flex justify-center mt-8'>
-						<Link
-							href='/doc'
-							className='flex text-[#556CD6] text-sm font-bold items-center'
-						>
-							<span className='mr-3'>See all post</span>
-							<ArrowIcon />
-						</Link>
+						{categories.length > 0 && (
+							<Link
+								href={categories[0].slug}
+								className='flex text-[#556CD6] text-sm font-bold items-center'
+							>
+								<span className='mr-3'>See all post</span>
+								<ArrowIcon />
+							</Link>
+						)}
 					</div>
 				</section>
 			</div>

@@ -1,0 +1,135 @@
+---
+title: What Is “The Cloud”? A Simple Intro
+description: Integrate Markdoc into your Next.js app
+author: Demola Malomo
+tags: ['cloud', 'fundamentals', 'aws']
+category: 'Cloud Basics'
+date: '2026-01-10'
+---
+
+## What Is “The Cloud”, Really? A Simple Breakdown
+
+When people hear “cloud,” it often sounds abstract, like something mysterious happening somewhere on the internet. In reality, the cloud is just a huge collection of computers sitting in data centers around the world, connected by very fast networks, and rented out to anyone who needs them.
+
+Instead of buying and managing your own servers, you rent what you need and use it over the internet. At the core of all cloud platforms are three main building blocks:
+
+-   **Virtual machines (compute)**
+-   **Storage**
+-   **Networking**
+
+Everything else in the cloud is built on top of these.
+
+#### Virtual Machines: Your Computer, Just Not on Your Desk
+
+Let’s say you want a new computer to run an app, host a website, or test some code. Instead of buying a physical laptop or server, you rent a virtual one from a cloud provider. That virtual computer is called a **virtual machine**, or VM.
+
+It behaves like a normal computer. It has an operating system, CPU, memory, and disk. The difference is that it lives in a data center and you access it over the internet.
+
+A good way to think about it is this:
+you open your laptop, but the actual “computer” doing the work is sitting in another country, running 24/7 in a server rack.
+
+You can start a VM when you need it, shut it down when you are done, and only pay for the time it runs. If you need more power, you switch to a bigger VM. If traffic drops, you scale down. This is why startups can launch products without spending millions on hardware.
+
+**Common VM services from cloud providers:**
+
+-   **AWS:** [EC2 (Elastic Compute Cloud)](https://aws.amazon.com/ec2/)
+-   **Google Cloud:** [Compute Engine](https://cloud.google.com/compute)
+-   **Azure:** [Virtual Machines (yes, that is the actual name 😄)](https://azure.microsoft.com/en-us/products/virtual-machines)
+
+These come in different sizes depending on what you are running. Small ones for simple apps, bigger ones for databases, video processing, or heavy workloads.
+
+#### Storage: Where Your Data Actually Lives
+
+Every app produces data. Logs, images, backups, videos, documents, and database files all need a place to live. In the cloud, that place is **cloud storage**.
+
+Instead of saving files to your laptop or an office server, you upload them to storage services in the cloud. These systems are built to handle massive amounts of data and keep copies across multiple machines, so if one disk fails, your data is still safe.
+
+Think of cloud storage as a giant online drive that scales as much as you need. Today you store 5 GB. Tomorrow you store 5 TB. You do not have to buy new disks or move files around.
+
+**Popular storage services:**
+
+-   **AWS:** [S3 (Simple Storage Service)](https://aws.amazon.com/s3/)
+-   **Google Cloud:** [Cloud Storage](https://cloud.google.com/storage)
+-   **Azure:** [Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs)
+
+These services are used for things like:
+
+-   Storing user uploads in mobile and web apps
+-   Keeping backups of company systems
+-   Hosting images and videos for websites
+-   Powering data analytics platforms
+
+#### Networking: How Everything Talks to Everything
+
+Now that you have computers and storage, they need a way to communicate. That is where **cloud networking** comes in.
+
+Networking handles how your virtual machines talk to each other, how they reach storage services, and how users from the internet access your app.
+
+Cloud providers let you create private networks that behave like company office networks, just fully virtual. You control which machines can talk to each other, which ones can access the internet, and which ones stay private.
+
+It is basically traffic control for your cloud resources.
+
+**Networking services by provider:**
+
+-   **AWS:** [VPC (Virtual Private Cloud)](https://aws.amazon.com/vpc/)
+-   **Google Cloud:** [VPC](https://cloud.google.com/vpc)
+-   **Azure:** [VNet (Virtual Network)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
+
+With these, you can:
+
+-   Isolate sensitive systems like databases
+-   Expose only your API servers to the public internet
+-   Connect cloud systems to on-premise office networks using VPNs
+
+### So Why Is It Called “Cloud”?
+
+The name comes from old network diagrams. Engineers used a cloud symbol to represent the internet or external networks they did not want to draw in detail. Over time, anything that lived “somewhere on the internet” started being called the cloud.
+
+In reality, it is all very physical. Buildings, cables, power systems, cooling units, and racks of servers. The “cloud” part just means you do not have to care where the hardware is or how it is maintained.
+
+You focus on using it, not owning it.
+
+### Beyond the Basics: Services Built on Top of Compute, Storage, and Network
+
+Once cloud providers had solid compute, storage, and networking, they started offering higher-level services that remove even more infrastructure work from developers.
+
+These services still run on the same basic building blocks. You just do not have to manage them directly.
+
+#### Examples from AWS
+
+-   **[Databases](https://aws.amazon.com/rds/):** Amazon RDS runs managed databases on top of cloud compute and storage. You focus on queries, not server setup.
+
+-   **[Machine Learning](https://aws.amazon.com/sagemaker/):** SageMaker uses compute for training models and storage for datasets, but wraps everything in tools made for ML workflows.
+
+-   **[Serverless](https://aws.amazon.com/lambda/):** AWS Lambda runs your code without you creating VMs yourself, but under the hood it still uses virtual machines and storage.
+
+#### Examples from Google Cloud
+
+-   **[Big Data](https://cloud.google.com/bigquery):** BigQuery stores huge datasets in Cloud Storage and uses Google’s networking and compute to run fast queries.
+
+-   **[AI Platforms](https://cloud.google.com/products/ai):** Training jobs still run on compute instances with datasets pulled from storage.
+
+-   **[App Hosting](https://cloud.google.com/appengine):** App Engine lets you deploy apps without managing servers directly, but the servers still exist behind the scenes.
+
+### Examples from Azure
+
+-   **[DevOps](https://azure.microsoft.com/en-us/products/devops):** Azure DevOps uses compute and storage to run build pipelines and host artifacts.
+
+-   **[IoT](https://azure.microsoft.com/en-us/products/iot-hub):** Azure IoT Hub routes data from devices using cloud networks and stores it for processing and analytics.
+
+-   **[Blockchain](https://azure.microsoft.com/en-us/solutions/web3):** Managed blockchain services still rely on standard virtual machines and storage, just packaged for specific use cases.
+
+So even when you are using fancy services like AI platforms or serverless functions, you are still standing on the same three pillars: compute, storage, and networking.
+
+### Wrapping It Up
+
+The cloud is not magic and it is not floating in the sky. It is a global collection of data centers offering virtual computers, massive storage systems, and fast networks that anyone can rent and use.
+
+Once you understand those basics, everything else in cloud platforms starts to make more sense. Databases, AI tools, DevOps pipelines, analytics platforms, and serverless apps are all just different ways of packaging and managing those same core resources.
+
+So next time someone says “it runs in the cloud,” you can translate that to:
+it runs on someone else’s computers, in someone else’s building, connected by very fast networks, and billed by the minute.
+
+And honestly, that is a pretty good deal.
+
+Happy cloud building ☁️

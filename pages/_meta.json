@@ -1,5 +1,4 @@
 {
-  "introduction": "Introduction",
-  "ecs": "ECS",
-  "fargate": "AWS Fargate"
+  "index": "Home",
+  "cloud-basics": "Cloud Basics"
 }

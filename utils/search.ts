@@ -19,6 +19,7 @@ export interface SearchResult {
     date?: string;
     tags?: string[];
     description?: string;
+    category?: string;
 }
 
 export async function searchMdxFiles(query: string): Promise<SearchResult[]> {
@@ -75,6 +76,8 @@ export async function listMdxFiles(): Promise<SearchResult[]> {
                 content: plainText,
                 date: data.date || '1970-01-01', // Fallback for missing dates
                 tags: data.tags || [],
+                category: data.category || '',
+                description: data.description || '',
             };
         })
     );
@@ -96,4 +99,36 @@ async function getMdxFiles(dir: string): Promise<string[]> {
     );
     return Array.prototype.concat(...files)
         .filter(file => /\.mdx?$/.test(file));
+}
+
+export interface CategoryInfo {
+    name: string;
+    slug: string; // First item's slug in this category
+    count: number;
+}
+
+export async function getCategories(): Promise<CategoryInfo[]> {
+    const posts = await listMdxFiles();
+
+    // Group posts by category
+    const categoryMap = new Map<string, { slug: string; count: number }>();
+
+    for (const post of posts) {
+        if (post.category && post.category.trim() !== '') {
+            const category = post.category.trim();
+            if (!categoryMap.has(category)) {
+                // First post in this category - store its slug
+                categoryMap.set(category, { slug: post.slug, count: 1 });
+            } else {
+                // Increment count for existing category
+                const existing = categoryMap.get(category)!;
+                existing.count++;
+            }
+        }
+    }
+
+    // Convert to array and sort by name
+    return Array.from(categoryMap.entries())
+        .map(([name, { slug, count }]) => ({ name, slug, count }))
+        .sort((a, b) => a.name.localeCompare(b.name));
 }

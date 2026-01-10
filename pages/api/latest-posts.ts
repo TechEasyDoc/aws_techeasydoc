@@ -10,7 +10,6 @@ export default async function handler(
         const results = await listMdxFiles();
         res.status(200).json(results);
     } catch (error) {
-        console.error('List error:', error);
         res.status(500).json({ error: 'Failed to get the list of files' });
     }
 }
