@@ -3,6 +3,11 @@ import Script from 'next/script';
 
 export default {
 	logo: <Logo />,
+	useNextSeoProps() {
+		return {
+			titleTemplate: '%s – TechEasyDoc',
+		};
+	},
 	head: (
 		<>
 			<Script
