@@ -4,33 +4,59 @@
   </a>
 </p>
 
-  <p align="center">AWS Stuffs made easy and enjoyable<p>
+  <p align="center">Making AWS concepts easy and enjoyable to learn<p>
 
 <p align="center">
-   <a href="https://">View Blog</a>
+   <a href="https://aws.techeasydoc.com/">View Blog</a>
 </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
 
 # AWS Tech Easy Blog
-Welcome to the **AWS Tech Simplified Blog** – an open-source platform dedicated to demystifying complex AWS technologies. This Next.js project uses [Nextra](https://nextra.vercel.app) to render and manage blog content, making it easy for anyone to run it locally and contribute their insights.
+
+Welcome to **AWS Tech Easy Blog**, an open source platform focused on simplifying AWS concepts through practical, easy to understand articles.  
+This project is built with **Next.js** and **Nextra**, and all blog content is written in **MDX**.
+
+You can contribute by writing articles, improving existing posts, fixing typos, or enhancing the site itself.
 
 ---
 
-## Table of Contents
+## ✍️ Quick Start for Writers (No Coding Needed)
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running Locally](#running-locally)
-  - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [Buy Me a Coffee](#buy-me-a-coffee)
-- [License](#license)
-- [Additional Resources](#additional-resources)
+You do not need to run the project locally to contribute an article.
 
+1. Fork this repository
+2. Go to the appropriate category folder inside `pages/`
+3. Create a new `.mdx` file using the template below
+4. Commit your changes and open a Pull Request to the `main` branch
+
+### Blog Post Template
+
+```md
+---
+title: "Your AWS Guide Title"
+date: "2024-03-20"
+author: "Your Name"
+description: "A clear summary of your post"
+cover: "/images/your-image.jpg"
+tags: ["EC2", "Serverless"]
+---
+
+## Introduction
+
+## Main Content
+
+## Conclusion
+```
+
+### File Naming Rules
+- Use lowercase and kebab case
+  Example: `understanding-ec2-auto-scaling.mdx`
+
+### Categories
+- Use existing folders like EC2, EKS, IAM, Serverless, etc.
+- If your topic does not fit, you may create a new category folder and mention it in your PR description
 ---
 
 ## Features
@@ -42,9 +68,9 @@ Welcome to the **AWS Tech Simplified Blog** – an open-source platform dedicate
 
 ---
 
-## Getting Started
+## Getting Started (For Local Development)
 
-Follow these steps to set up the project on your local machine.
+Follow these steps if you want to run the project locally or contribute to the code.
 
 ### Prerequisites
 
@@ -87,43 +113,14 @@ Your blog should now be running at http://localhost:3000.
     │   └── EKS/          
     
 
-#### Adding a Blog Post
-1. Create a new `.mdx` file inside a matching category.
-2. Use frontmatter:
-    ```
-    ---
-    title: 'Your AWS Guide Title'
-    date: '2024-03-20'
-    author: 'Your Name'
-    description: 'A clear summary of your post'
-    cover: '/images/your-image.jpg'
-    tags: ['EC2', 'Serverless']
-    ---
 ## Contributing
-We welcome contributions to make AWS technology even more accessible! Here’s how you can help:
+We welcome both content and code contributions.
 
-1. **Fork the Repository**: Click the "Fork" button at the top right of the repository page.
-
-2. **Create a Feature Branch**:
-
-    ```bash
-    git checkout -b feature/your-feature-name
-3. **Make Your Changes**: Follow the existing code style and update documentation as needed.
-
-4. **Commit Your Changes**: 
-    ```bash
-    git commit -am "Add: [brief description of your changes]"
-5. Push to Your Fork:
-    ```bash
-    git push origin feature/your-feature-name
-6. **Submit a Pull Request**: Open a pull request explaining your changes and referencing any related issues.
-
-If you’re new to contributing, check out our CONTRIBUTING.md file for detailed guidelines and best practices.
+For detailed guidelines, please read **CONTRIBUTING.md**.
 
 ## ☕ Buy Me a Coffee
 
 If you find this project helpful, consider supporting my caffeine addiction:  
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/techeasydoc)
-
 ---
