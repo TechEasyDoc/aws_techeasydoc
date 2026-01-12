@@ -1,0 +1,14 @@
+content:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "pages/**/*.mdx"
+
+code:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.ts"
+          - "**/*.tsx"
+          - "**/*.js"
+          - "**/*.jsx"
+          - "components/**"
+          - "lib/**"
