@@ -1,0 +1,40 @@
+name: Validate Blog Content
+
+on:
+  pull_request:
+    paths:
+      - "pages/**/*.mdx"
+
+jobs:
+  validate-frontmatter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Validate frontmatter
+        run: |
+          echo "Checking MDX frontmatter..."
+
+          REQUIRED_FIELDS=("title:" "date:" "author:" "authorGithub:" "description:" "tags:" "category:")
+
+          FAILED=0
+
+          for file in $(git diff --name-only origin/main...HEAD | grep ".mdx$"); do
+            echo "Checking $file"
+
+            for field in "${REQUIRED_FIELDS[@]}"; do
+              if ! grep -q "$field" "$file"; then
+                echo "Missing $field in $file"
+                FAILED=1
+              fi
+            done
+          done
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo "Frontmatter validation failed"
+            exit 1
+          fi
+
+          echo "Frontmatter looks good"
