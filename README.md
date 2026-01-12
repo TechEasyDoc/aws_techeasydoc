@@ -137,7 +137,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mr-Malomz"><img src="https://avatars.githubusercontent.com/u/35299371?v=4?s=100" width="100px;" alt="Demola Malomo"/><br /><sub><b>Demola Malomo</b></sub></a><br /><a href="https://github.com/TechEasyDoc/aws_techeasydoc/pulls?q=is%3Apr+reviewed-by%3AMr-Malomz" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mr-Malomz"><img src="https://avatars.githubusercontent.com/u/35299371?v=4?s=100" width="100px;" alt="Demola Malomo"/><br /><sub><b>Demola Malomo</b></sub></a><br /><a href="https://github.com/TechEasyDoc/aws_techeasydoc/pulls?q=is%3Apr+reviewed-by%3AMr-Malomz" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/TechEasyDoc/aws_techeasydoc/commits?author=Mr-Malomz" title="Code">💻</a> <a href="#content-Mr-Malomz" title="Content">🖋</a> <a href="https://github.com/TechEasyDoc/aws_techeasydoc/commits?author=Mr-Malomz" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
