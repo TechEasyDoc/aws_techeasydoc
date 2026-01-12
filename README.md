@@ -121,13 +121,6 @@ We welcome both content and code contributions.
 
 For detailed guidelines, please read **CONTRIBUTING.md**.
 
-## ✨ Contributors
-
-Thanks to everyone who has contributed to making AWS easier to learn.
-
-<!-- ALL-CONTRIBUTORS-LIST:START -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 ## ☕ Buy Me a Coffee
 
 If you find this project helpful, consider supporting my caffeine addiction:  
