@@ -1,4 +1,7 @@
 <p align="center">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://">
     <img alt="TechEasyDoc" src="https://res.cloudinary.com/dtgbzmpca/image/upload/v1741473305/tech_easy_doc_logo_jjpkkh.svg" width="300" />
   </a>
@@ -124,3 +127,24 @@ If you find this project helpful, consider supporting my caffeine addiction:
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/techeasydoc)
 ---
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mr-Malomz"><img src="https://avatars.githubusercontent.com/u/35299371?v=4?s=100" width="100px;" alt="Demola Malomo"/><br /><sub><b>Demola Malomo</b></sub></a><br /><a href="https://github.com/TechEasyDoc/aws_techeasydoc/pulls?q=is%3Apr+reviewed-by%3AMr-Malomz" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
