@@ -8,6 +8,7 @@
 </p>
 
   <p align="center">Making AWS concepts easy and enjoyable to learn<p>
+  
 
 <p align="center">
    <a href="https://aws.techeasydoc.com/">View Blog</a>
