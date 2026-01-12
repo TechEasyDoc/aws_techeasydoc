@@ -9,22 +9,44 @@ export default {
 			titleTemplate: '%s – TechEasyDoc',
 		};
 	},
-	head: (
-		<>
-			<Script
-				src='https://www.googletagmanager.com/gtag/js?id=G-EDY2ZLQN2J'
-				strategy='afterInteractive'
-			/>
-			<Script id='google-analytics' strategy='afterInteractive'>
-				{`
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'G-EDY2ZLQN2J');
-				`}
-			</Script>
-		</>
-	),
+	head: ({ title, meta }) => {
+		const ogTitle = meta?.title || title || 'TechEasyDoc';
+		const ogDescription =
+			meta?.description ||
+			'Making AWS concepts easy and enjoyable to learn';
+		const ogImage = 'https://aws.techeasydoc.com/og-image.png';
+
+		return (
+			<>
+				{/* Dynamic OG Tags */}
+				<meta property='og:type' content='article' />
+				<meta property='og:title' content={ogTitle} />
+				<meta property='og:description' content={ogDescription} />
+				<meta property='og:image' content={ogImage} />
+				<meta property='og:site_name' content='TechEasyDoc' />
+
+				{/* Dynamic Twitter Tags */}
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta name='twitter:title' content={ogTitle} />
+				<meta name='twitter:description' content={ogDescription} />
+				<meta name='twitter:image' content={ogImage} />
+
+				{/* Google Analytics */}
+				<Script
+					src='https://www.googletagmanager.com/gtag/js?id=G-EDY2ZLQN2J'
+					strategy='afterInteractive'
+				/>
+				<Script id='google-analytics' strategy='afterInteractive'>
+					{`
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-EDY2ZLQN2J');
+					`}
+				</Script>
+			</>
+		);
+	},
 	project: {
 		link: 'https://github.com/shuding/nextra',
 	},
