@@ -107,7 +107,7 @@ export default function Home() {
 							Failed to load latest posts
 						</div>
 					)}
-					{list.map((item) => (
+					{list.slice(0, 3).map((item) => (
 						<Article
 							key={item.slug}
 							description={item.description!}
