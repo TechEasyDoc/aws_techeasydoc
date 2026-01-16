@@ -1,6 +1,6 @@
 <p align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://">
     <img alt="TechEasyDoc" src="https://res.cloudinary.com/dtgbzmpca/image/upload/v1741473305/tech_easy_doc_logo_jjpkkh.svg" width="300" />
@@ -138,6 +138,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mr-Malomz"><img src="https://avatars.githubusercontent.com/u/35299371?v=4?s=100" width="100px;" alt="Demola Malomo"/><br /><sub><b>Demola Malomo</b></sub></a><br /><a href="https://github.com/TechEasyDoc/aws_techeasydoc/pulls?q=is%3Apr+reviewed-by%3AMr-Malomz" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/TechEasyDoc/aws_techeasydoc/commits?author=Mr-Malomz" title="Code">💻</a> <a href="#content-Mr-Malomz" title="Content">🖋</a> <a href="https://github.com/TechEasyDoc/aws_techeasydoc/commits?author=Mr-Malomz" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://kenechidukor.com"><img src="https://avatars.githubusercontent.com/u/32472950?v=4?s=100" width="100px;" alt="Kenechi Dukor"/><br /><sub><b>Kenechi Dukor</b></sub></a><br /><a href="#content-kennydukor" title="Content">🖋</a> <a href="https://github.com/TechEasyDoc/aws_techeasydoc/commits?author=kennydukor" title="Documentation">📖</a> <a href="https://github.com/TechEasyDoc/aws_techeasydoc/pulls?q=is%3Apr+reviewed-by%3Akennydukor" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
