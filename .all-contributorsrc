@@ -18,6 +18,17 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "kennydukor",
+      "name": "Kenechi Dukor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32472950?v=4",
+      "profile": "https://kenechidukor.com",
+      "contributions": [
+        "content",
+        "doc",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
