@@ -10,6 +10,8 @@ date: '2026-01-17'
 
 ## What Is an Application Load Balancer and Why You Probably Need One
 
+_Written by_ [Demola Malomo](https://github.com/Mr-Malomz)
+
 At some point, every backend application runs into the same limitation. One server is no longer enough.
 
 Traffic increases, response times start to slip, and users begin to notice. The natural solution is to add more servers. But the moment you do that, a new problem appears.
