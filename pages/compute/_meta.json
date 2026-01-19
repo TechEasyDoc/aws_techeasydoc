@@ -1,4 +1,5 @@
 {
   "deploying-a-simple-application-with-apache": "AWS EC2: Deploying a Simple Application with Apache",
-  "deploy-an-apache-web-server-on-aws-ec2-using-terraform": "Deploy an Apache Web Server on AWS EC2 Using Terraform"
+  "deploy-an-apache-web-server-on-aws-ec2-using-terraform": "Deploy an Apache Web Server on AWS EC2 Using Terraform",
+  "deploying-an-apache-web-server-on-aws-ec2-using-cloudformation": "Deploying an Apache Web Server on AWS EC2 Using CloudFormation"
 }
