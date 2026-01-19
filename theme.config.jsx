@@ -63,8 +63,8 @@ export default {
 	darkMode: false,
 	project: {},
 	navigation: {
-		prev: false,
-		next: false,
+		prev: true,
+		next: true,
 	},
 	footer: {
 		text: (
