@@ -1,5 +1,6 @@
 {
   "index": "Home",
   "cloud-basics": "Cloud Basics",
-  "compute": "Compute"
+  "compute": "Compute",
+  "networking": "Networking"
 }
